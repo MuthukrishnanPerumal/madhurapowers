@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MADHURA POWERS — Next-Gen Clean Energy Solutions</title>
+    <link rel="icon" type="image/jpeg" href="images/icon.jpg">
+    <link rel="apple-touch-icon" href="images/icon.jpg">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        solar: {
+                            yellow: '#F59E0B',
+                            amber: '#D97706',
+                            orange: '#EA580C',
+                            navy: '#0F172A',
+                            slate: '#1E293B',
+                            green: '#059669',
+                            emerald: '#10B981',
+                            bg: '#F8FAFC',
+                            card: '#FFFFFF',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(15, 23, 42, 0.05)',
+                        'glow': '0 0 25px rgba(245, 158, 11, 0.25)',
+                        'card-hover': '0 20px 40px -15px rgba(15, 23, 42, 0.12)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom subtle scrollbar & utility styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.65) 100%), 
+                        url('https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .glass-card-dark {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-solar-bg text-solar-slate font-sans antialiased selection:bg-solar-yellow selection:text-solar-navy">
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="fixed top-20 right-5 z-50 transform translate-x-full opacity-0 transition-all duration-300 ease-in-out max-w-md bg-white border-l-4 border-solar-green shadow-2xl rounded-r-xl p-4 flex items-center space-x-3">
+        <div class="bg-emerald-100 text-solar-green p-2 rounded-full">
+            <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+        </div>
+        <div>
+            <p id="toast-title" class="text-sm font-bold text-solar-navy">Action Successful</p>
+            <p id="toast-desc" class="text-xs text-slate-500">Your request has been submitted.</p>
+        </div>
+    </div>
+
+    <!-- 1. Header / Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="images/logo.jpg" alt="MADHURA POWERS logo" class="h-11 w-11 rounded-full object-cover shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                <span class="text-2xl font-extrabold tracking-tight text-solar-navy">
+                    MADHURA  <span class="text-solar-amber">POWERS</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-solar-orange transition-colors">About</a>
+                <a href="#solutions" class="hover:text-solar-orange transition-colors">Solutions</a>
+                <a href="#how-it-works" class="hover:text-solar-orange transition-colors">How It Works</a>
+                <a href="#products" class="hover:text-solar-orange transition-colors">Products</a>
+                <a href="#projects" class="hover:text-solar-orange transition-colors">Projects</a>
+                <a href="#faq" class="hover:text-solar-orange transition-colors">FAQs</a>
+                <a href="#contact" class="hover:text-solar-orange transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA & Phone -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="tel:+1234567890" class="hidden xl:flex items-center text-xs font-bold text-slate-600 hover:text-solar-navy">
+                    <i data-lucide="phone-call" class="w-4 h-4 mr-2 text-solar-green"></i> 99439 70466
+                </a>
+                <button onclick="openModal()" class="bg-solar-navy hover:bg-slate-800 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center">
+                    <span>Get a Free Quote</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Nav -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-6 space-y-3 mt-3">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">About</a>
+            <a href="#solutions" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">Solutions</a>
+            <a href="#how-it-works" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">How It Works</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">Products</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">Projects</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">FAQs</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-slate-700 hover:text-solar-orange">Contact</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col space-y-3">
+                <button onclick="openModal(); toggleMobileMenu()" class="w-full bg-solar-navy text-white font-semibold py-3 rounded-xl text-center shadow-md">
+                    Get a Free Solar Quote
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative min-h-[90vh] pt-32 pb-20 flex items-center hero-bg text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-solar-yellow mb-6">
+                    <span class="w-2 h-2 rounded-full bg-solar-yellow animate-pulse"></span>
+                    <span>Clean Energy Revolution</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Power Your Future With <span class="gradient-text">Clean Solar Energy</span>
+                </h1>
+
+                <!-- Supporting Text -->
+                <p class="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed mb-8 max-w-2xl">
+                    Save on electricity, increase energy independence, and make a smarter investment with reliable, enterprise-grade solar power solutions.
+                </p>
+
+                <!-- Primary CTAs -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+                    <button onclick="openModal()" class="bg-gradient-to-r from-solar-yellow to-solar-orange hover:from-amber-500 hover:to-orange-600 text-solar-navy font-bold px-8 py-4 rounded-xl shadow-lg shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/35 transition-all transform hover:-translate-y-0.5 flex items-center justify-center text-base">
+                        Get a Free Quote <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </button>
+                    <a href="#solutions" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center text-base flex items-center justify-center">
+                        Explore Solar Solutions
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/15 text-xs sm:text-sm font-medium text-slate-300">
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-solar-yellow flex-shrink-0"></i>
+                        <span>25+ Years Expertise</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-solar-yellow flex-shrink-0"></i>
+                        <span>Quality Tier-1 Panels</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-solar-yellow flex-shrink-0"></i>
+                        <span>Pro Installation</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-solar-yellow flex-shrink-0"></i>
+                        <span>25-Year Warranty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Quick Energy Savings Calculator -->
+    <section class="relative z-20 -mt-16 max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="glass-panel rounded-3xl shadow-soft p-6 sm:p-10 border border-slate-200/80">
+            <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+                <!-- Inputs Side -->
+                <div class="lg:w-1/2 space-y-6">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 text-solar-orange text-xs font-bold uppercase tracking-wider mb-1">
+                            <i data-lucide="calculator" class="w-4 h-4"></i>
+                            <span>Interactive Estimator</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-solar-navy">How Much Can You Save With Solar?</h2>
+                        <p class="text-xs text-slate-500 mt-1">Estimate your energy generation, cost savings, and environmental payback.</p>
+                    </div>
+
+                    <!-- Input 1: Electricity Bill -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-sm font-semibold text-slate-700">Monthly Electricity Bill</label>
+                            <span id="bill-display" class="text-lg font-extrabold text-solar-orange">$250 / mo</span>
+                        </div>
+                        <input type="range" id="bill-input" min="50" max="6000" step="25" value="250" oninput="calculateSavings()" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-solar-orange">
+                        <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                            <span>$50</span>
+                            <span>$3,000</span>
+                            <span>$6,000+</span>
+                        </div>
+                    </div>
+
+                    <!-- Input 2: Property Type -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Property Type</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <button type="button" onclick="setPropertyType('residential')" id="prop-residential" class="prop-btn py-2.5 px-3 border border-solar-orange bg-orange-50/50 text-solar-orange font-semibold rounded-xl text-xs flex items-center justify-center space-x-1 transition-all">
+                                <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                                <span>Residential</span>
+                            </button>
+                            <button type="button" onclick="setPropertyType('commercial')" id="prop-commercial" class="prop-btn py-2.5 px-3 border border-slate-200 text-slate-600 font-semibold rounded-xl text-xs flex items-center justify-center space-x-1 hover:border-slate-300 transition-all">
+                                <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                                <span>Commercial</span>
+                            </button>
+                            <button type="button" onclick="setPropertyType('industrial')" id="prop-industrial" class="prop-btn py-2.5 px-3 border border-slate-200 text-slate-600 font-semibold rounded-xl text-xs flex items-center justify-center space-x-1 hover:border-slate-300 transition-all">
+                                <i data-lucide="factory" class="w-3.5 h-3.5"></i>
+                                <span>Industrial</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input 3: Location -->
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Sun Exposure Region</label>
+                        <select id="location-select" onchange="calculateSavings()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm text-slate-700 font-medium focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                            <option value="1.2">High Sunlight (South / Sunbelt Region)</option>
+                            <option value="1.0" selected>Moderate Sunlight (Central / East Coast)</option>
+                            <option value="0.85">Moderate-Low Sunlight (Northern Region)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Outputs Side -->
+                <div class="lg:w-1/2 bg-solar-navy rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden shadow-inner">
+                    <!-- Background accent design -->
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-solar-yellow/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-solar-green/10 rounded-full blur-2xl"></div>
+
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between border-b border-slate-700/80 pb-4 mb-6">
+                            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Estimated Solar Return</span>
+                            <span class="text-xs bg-solar-green/20 text-solar-emerald px-2.5 py-1 rounded-full font-semibold border border-solar-green/30">Tier-1 Yield</span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/50">
+                                <span class="text-xs text-slate-400 font-medium block mb-1">Monthly Savings</span>
+                                <span id="res-monthly" class="text-2xl sm:text-3xl font-extrabold text-solar-yellow">$212</span>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/50">
+                                <span class="text-xs text-slate-400 font-medium block mb-1">Annual Savings</span>
+                                <span id="res-annual" class="text-2xl sm:text-3xl font-extrabold text-solar-emerald">$2,544</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-3 text-center mb-6">
+                            <div class="bg-slate-800/40 p-3 rounded-lg">
+                                <i data-lucide="zap" class="w-4 h-4 text-solar-yellow mx-auto mb-1"></i>
+                                <span id="res-capacity" class="text-sm font-bold text-slate-100 block">6.2 kW</span>
+                                <span class="text-[10px] text-slate-400">Rec. Capacity</span>
+                            </div>
+                            <div class="bg-slate-800/40 p-3 rounded-lg">
+                                <i data-lucide="clock" class="w-4 h-4 text-solar-orange mx-auto mb-1"></i>
+                                <span id="res-payback" class="text-sm font-bold text-slate-100 block">4.8 Yrs</span>
+                                <span class="text-[10px] text-slate-400">Payback Period</span>
+                            </div>
+                            <div class="bg-slate-800/40 p-3 rounded-lg">
+                                <i data-lucide="leaf" class="w-4 h-4 text-solar-emerald mx-auto mb-1"></i>
+                                <span id="res-co2" class="text-sm font-bold text-slate-100 block">3.8 Tons</span>
+                                <span class="text-[10px] text-slate-400">CO₂ / Year Saved</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="openModalWithDetails()" class="relative z-10 w-full bg-gradient-to-r from-solar-yellow to-solar-orange text-solar-navy font-bold py-3.5 px-4 rounded-xl shadow-md hover:shadow-lg transition-all text-center text-sm flex items-center justify-center">
+                        <span>Get Detailed Solar Proposal</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Why Choose Solar? -->
+    <section id="about" class="py-24 bg-solar-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-solar-orange bg-orange-100/60 px-3 py-1 rounded-full">Smart Energy Choice</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-3">Why Make the Switch to Solar?</h2>
+                <p class="text-slate-600 mt-3 text-base">Harnessing the sun transforms an unpredictable monthly bill into a reliable, high-yield long-term asset.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-soft hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-solar-amber flex items-center justify-center mb-6">
+                        <i data-lucide="trending-down" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solar-navy mb-2">Lower Electricity Bills</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dramatically reduce or entirely eliminate your monthly grid reliance from day one of installation.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-soft hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-orange-100 text-solar-orange flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solar-navy mb-2">Energy Independence</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Shield your home or business from volatile utility rate hikes and unexpected grid power blackouts.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-soft hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-solar-green flex items-center justify-center mb-6">
+                        <i data-lucide="piggy-bank" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solar-navy mb-2">Long-Term Investment</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed"> Solar arrays add instant equity to real estate assets while delivering risk-free guaranteed annual returns.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-soft hover:shadow-card-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i data-lucide="globe" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solar-navy mb-2">Sustainable Future</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Actively decrease greenhouse gas emissions and leave a positive clean legacy for future generations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Solar Solutions -->
+    <section id="solutions" class="py-20 bg-white border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-solar-orange">Tailored Offerings</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-2">Engineered Solar Solutions</h2>
+                </div>
+                <p class="text-slate-600 max-w-md text-sm mt-3 md:mt-0">From single-family homes to high-voltage industrial plants, we deliver end-to-end solar engineering.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Solution 1 -->
+                <div class="group bg-solar-bg rounded-3xl overflow-hidden border border-slate-200/80 hover:border-solar-amber/40 transition-all duration-300 flex flex-col sm:flex-row h-full">
+                    <div class="sm:w-1/2 h-56 sm:h-auto overflow-hidden relative">
+                        <img src="images/Residential Solar.jpg" alt="Residential Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-solar-navy text-xs font-bold px-3 py-1 rounded-full">Residential</span>
+                    </div>
+                    <div class="sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-solar-navy mb-2">Residential Solar</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Sleek rooftop solar systems customized to optimize house aesthetics and power 100% of household needs.</p>
+                        </div>
+                        <button onclick="openModalWithSolution('Residential Solar')" class="inline-flex items-center text-sm font-bold text-solar-orange hover:text-amber-600 transition-colors">
+                            <span>Explore Residential</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="group bg-solar-bg rounded-3xl overflow-hidden border border-slate-200/80 hover:border-solar-amber/40 transition-all duration-300 flex flex-col sm:flex-row h-full">
+                    <div class="sm:w-1/2 h-56 sm:h-auto overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80" alt="Commercial Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-solar-navy text-xs font-bold px-3 py-1 rounded-full">Commercial</span>
+                    </div>
+                    <div class="sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-solar-navy mb-2">Commercial Solar</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Minimize operational overhead for corporate offices, retail spaces, and commercial properties.</p>
+                        </div>
+                        <button onclick="openModalWithSolution('Commercial Solar')" class="inline-flex items-center text-sm font-bold text-solar-orange hover:text-amber-600 transition-colors">
+                            <span>Explore Commercial</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="group bg-solar-bg rounded-3xl overflow-hidden border border-slate-200/80 hover:border-solar-amber/40 transition-all duration-300 flex flex-col sm:flex-row h-full">
+                    <div class="sm:w-1/2 h-56 sm:h-auto overflow-hidden relative">
+                        <img src="images/Industrial Solar.png" alt="Residential Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-solar-navy text-xs font-bold px-3 py-1 rounded-full">Industrial</span>
+                    </div>
+                    <div class="sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-solar-navy mb-2">Industrial Solar</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Megawatt-scale arrays for manufacturing plants, warehouses, and logistics hubs with heavy power draws.</p>
+                        </div>
+                        <button onclick="openModalWithSolution('Industrial Solar')" class="inline-flex items-center text-sm font-bold text-solar-orange hover:text-amber-600 transition-colors">
+                            <span>Explore Industrial</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="group bg-solar-bg rounded-3xl overflow-hidden border border-slate-200/80 hover:border-solar-amber/40 transition-all duration-300 flex flex-col sm:flex-row h-full">
+                    <div class="sm:w-1/2 h-56 sm:h-auto overflow-hidden relative">
+                        <img src="images/Off_Grid.png" alt="Residential Solar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-solar-navy text-xs font-bold px-3 py-1 rounded-full">Off-Grid</span>
+                    </div>
+                    <div class="sm:w-1/2 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-solar-navy mb-2">Off-Grid Systems</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">Self-sustaining high-capacity microgrids with battery banks for remote or grid-free installations.</p>
+                        </div>
+                        <button onclick="openModalWithSolution('Off-Grid Solar')" class="inline-flex items-center text-sm font-bold text-solar-orange hover:text-amber-600 transition-colors">
+                            <span>Explore Off-Grid</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. How It Works -->
+    <section id="how-it-works" class="py-24 bg-solar-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-solar-green bg-emerald-100/60 px-3 py-1 rounded-full">Seamless Process</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-3">4 Simple Steps to Solar Energy</h2>
+                <p class="text-slate-600 mt-2 text-sm">We handle everything from site assessment to permits and grid interconnectivity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line Desktop -->
+                <div class="hidden md:block absolute top-1/2 left-10 right-10 h-0.5 bg-slate-200 -translate-y-8 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-soft text-center group hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-solar-navy text-solar-yellow font-extrabold text-xl flex items-center justify-center mx-auto mb-5 shadow-md group-hover:scale-110 transition-transform">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-solar-navy mb-2">Free Consultation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">We evaluate your current energy usage bills and establish your custom savings target.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-soft text-center group hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-solar-navy text-solar-yellow font-extrabold text-xl flex items-center justify-center mx-auto mb-5 shadow-md group-hover:scale-110 transition-transform">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-solar-navy mb-2">Site Assessment</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Drone and 3D modeling analyze roof angle, shading, and ideal solar array geometry.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-soft text-center group hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-solar-navy text-solar-yellow font-extrabold text-xl flex items-center justify-center mx-auto mb-5 shadow-md group-hover:scale-110 transition-transform">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-solar-navy mb-2">Pro Installation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Certified engineers complete panel mounting, inverter wiring, and grid inspections in 1-2 days.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border border-slate-200/80 shadow-soft text-center group hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-solar-yellow to-solar-orange text-solar-navy font-extrabold text-xl flex items-center justify-center mx-auto mb-5 shadow-md group-hover:scale-110 transition-transform">
+                        04
+                    </div>
+                    <h3 class="text-lg font-bold text-solar-navy mb-2">Start Saving</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Flip the switch, track real-time power generation on your mobile app, and enjoy low bills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Solar Products Showcase -->
+    <section id="products" class="py-24 bg-white border-t border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-solar-orange">Tier-1 Hardware</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-2">Premium Solar Equipment</h2>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex items-center space-x-2 overflow-x-auto pb-2 mt-4 md:mt-0 no-scrollbar">
+                    <button onclick="filterProducts('all')" class="product-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-solar-navy text-white transition-all">All</button>
+                    <button onclick="filterProducts('panels')" class="product-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Panels</button>
+                    <button onclick="filterProducts('inverters')" class="product-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Inverters</button>
+                    <button onclick="filterProducts('batteries')" class="product-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">Storage</button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="product-card panels bg-solar-bg rounded-2xl p-5 border border-slate-200/80 hover:shadow-card-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-white rounded-xl overflow-hidden mb-4 p-4 flex items-center justify-center relative">
+                            <img src="images/Industrial Solar.png" alt="MADHURA POWERS Max Panel" class="max-h-full object-contain">
+                            <span class="absolute top-2 right-2 bg-amber-100 text-solar-amber text-[10px] font-extrabold px-2 py-0.5 rounded">22.8% Eff</span>
+                        </div>
+                        <h4 class="text-base font-bold text-solar-navy">MADHURA POWERS Max 450W Monocrystalline</h4>
+                        <p class="text-xs text-slate-500 mt-1 line-clamp-2">High-efficiency half-cut PERC panel optimized for all shade conditions.</p>
+                        <div class="mt-3 pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700 flex justify-between">
+                            <span>Power Output:</span>
+                            <span class="text-solar-orange">450 Watts</span>
+                        </div>
+                    </div>
+                    <button onclick="openProductDetails('MADHURA POWERS Max 450W', '22.8% Efficiency Monocrystalline Module', '25-Year Product & Yield Warranty')" class="mt-4 w-full bg-white border border-slate-300 hover:border-solar-navy text-solar-navy font-bold py-2 rounded-lg text-xs transition-colors">
+                        View Specifications
+                    </button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card inverters bg-solar-bg rounded-2xl p-5 border border-slate-200/80 hover:shadow-card-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-white rounded-xl overflow-hidden mb-4 p-4 flex items-center justify-center relative">
+                            <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=400&q=80" alt="Smart Inverter" class="max-h-full object-contain">
+                            <span class="absolute top-2 right-2 bg-emerald-100 text-solar-green text-[10px] font-extrabold px-2 py-0.5 rounded">98.6% Eff</span>
+                        </div>
+                        <h4 class="text-base font-bold text-solar-navy">MADHURA POWERS Grid 10kW Hybrid Inverter</h4>
+                        <p class="text-xs text-slate-500 mt-1 line-clamp-2">Smart dual-MPPT power inverter with integrated cloud app monitoring.</p>
+                        <div class="mt-3 pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700 flex justify-between">
+                            <span>Capacity:</span>
+                            <span class="text-solar-orange">10.0 kW Dual</span>
+                        </div>
+                    </div>
+                    <button onclick="openProductDetails('MADHURA POWERS Grid 10kW Inverter', '98.6% Efficiency Hybrid Inverter', '10-Year Replacement Warranty')" class="mt-4 w-full bg-white border border-slate-300 hover:border-solar-navy text-solar-navy font-bold py-2 rounded-lg text-xs transition-colors">
+                        View Specifications
+                    </button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card batteries bg-solar-bg rounded-2xl p-5 border border-slate-200/80 hover:shadow-card-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-white rounded-xl overflow-hidden mb-4 p-4 flex items-center justify-center relative">
+                            <img src="images/Off_Grid.png" alt="Battery Pack" class="max-h-full object-contain">
+                            <span class="absolute top-2 right-2 bg-blue-100 text-blue-600 text-[10px] font-extrabold px-2 py-0.5 rounded">LiFePO4</span>
+                        </div>
+                        <h4 class="text-base font-bold text-solar-navy">MADHURA POWERS Vault 13.5kWh Storage</h4>
+                        <p class="text-xs text-slate-500 mt-1 line-clamp-2">Ultra-safe Lithium Iron Phosphate battery wall with whole-home backup.</p>
+                        <div class="mt-3 pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700 flex justify-between">
+                            <span>Usable Energy:</span>
+                            <span class="text-solar-orange">13.5 kWh</span>
+                        </div>
+                    </div>
+                    <button onclick="openProductDetails('MADHURA POWERS Vault 13.5kWh', 'LiFePO4 Modular Home Battery Storage System', '10-Year / 6000 Cycle Warranty')" class="mt-4 w-full bg-white border border-slate-300 hover:border-solar-navy text-solar-navy font-bold py-2 rounded-lg text-xs transition-colors">
+                        View Specifications
+                    </button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card panels bg-solar-bg rounded-2xl p-5 border border-slate-200/80 hover:shadow-card-hover transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="h-44 bg-white rounded-xl overflow-hidden mb-4 p-4 flex items-center justify-center relative">
+                            <img src="images/Residential Solar.jpg" alt="Pro Solar Panel" class="max-h-full object-contain">
+                            <span class="absolute top-2 right-2 bg-amber-100 text-solar-amber text-[10px] font-extrabold px-2 py-0.5 rounded">23.4% Eff</span>
+                        </div>
+                        <h4 class="text-base font-bold text-solar-navy">MADHURA POWERS Pro 550W Commercial Panel</h4>
+                        <p class="text-xs text-slate-500 mt-1 line-clamp-2">Bifacial double-glass solar module capturing light from both surfaces.</p>
+                        <div class="mt-3 pt-3 border-t border-slate-200/60 text-xs font-semibold text-slate-700 flex justify-between">
+                            <span>Power Output:</span>
+                            <span class="text-solar-orange">550 Watts</span>
+                        </div>
+                    </div>
+                    <button onclick="openProductDetails('MADHURA POWERS Pro 550W', 'Bifacial Double-Glass Commercial Grade Panel', '30-Year Linear Power Warranty')" class="mt-4 w-full bg-white border border-slate-300 hover:border-solar-navy text-solar-navy font-bold py-2 rounded-lg text-xs transition-colors">
+                        View Specifications
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Our Projects -->
+    <section id="projects" class="py-24 bg-solar-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-solar-green bg-emerald-100/60 px-3 py-1 rounded-full">Real World Results</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-3">Featured Solar Projects</h2>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="flex items-center space-x-2 mt-4 md:mt-0">
+                    <button onclick="filterGallery('all')" class="gallery-btn px-4 py-2 rounded-xl text-xs font-bold bg-solar-navy text-white transition-all">All</button>
+                    <button onclick="filterGallery('residential')" class="gallery-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition-all">Residential</button>
+                    <button onclick="filterGallery('commercial')" class="gallery-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition-all">Commercial</button>
+                    <button onclick="filterGallery('industrial')" class="gallery-btn px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 transition-all">Industrial</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="gallery-item residential bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft group hover:shadow-card-hover transition-all">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/Residential Solar.jpg" alt="Green Residence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-solar-navy/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full">Residential</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-solar-navy">Green Horizon Villa</h3>
+                            <span class="text-xs font-bold text-solar-emerald bg-emerald-50 px-2 py-1 rounded">12 kW System</span>
+                        </div>
+                        <p class="text-xs text-slate-500 flex items-center mb-4">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1 text-solar-orange"></i> Austin, Texas
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Full sleek black rooftop installation paired with 27kWh energy storage for zero grid reliance.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="gallery-item commercial bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft group hover:shadow-card-hover transition-all">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/Off_Grid.png" alt="Tech Park" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-solar-navy/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full">Commercial</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-solar-navy">Apex Tech Campus</h3>
+                            <span class="text-xs font-bold text-solar-emerald bg-emerald-50 px-2 py-1 rounded">150 kW System</span>
+                        </div>
+                        <p class="text-xs text-slate-500 flex items-center mb-4">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1 text-solar-orange"></i> San Jose, California
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Commercial rooftop array cutting annual corporate carbon emissions by over 140 metric tons.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="gallery-item industrial bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-soft group hover:shadow-card-hover transition-all">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/Industrial Solar.png" alt="Industrial Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-solar-navy/80 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-full">Industrial</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-lg font-bold text-solar-navy">Titan Logistics Facility</h3>
+                            <span class="text-xs font-bold text-solar-emerald bg-emerald-50 px-2 py-1 rounded">1.2 MW System</span>
+                        </div>
+                        <p class="text-xs text-slate-500 flex items-center mb-4">
+                            <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1 text-solar-orange"></i> Phoenix, Arizona
+                        </p>
+                        <p class="text-xs text-slate-600 leading-relaxed">Megawatt rooftop deployment delivering complete Daytime Operational Power for distribution hubs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Solar Impact Statistics -->
+    <section class="py-20 bg-solar-navy text-white relative overflow-hidden">
+        <!-- Subtle Glow Orbs -->
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-solar-yellow/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-solar-orange/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-6 rounded-2xl glass-card-dark">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-solar-yellow mb-2 counter" data-target="10000">10,000+</div>
+                    <p class="text-xs sm:text-sm font-semibold text-slate-300">Solar Installations</p>
+                </div>
+                <div class="p-6 rounded-2xl glass-card-dark">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-solar-emerald mb-2 counter" data-target="85">85+ MW</div>
+                    <p class="text-xs sm:text-sm font-semibold text-slate-300">Clean Energy Capacity</p>
+                </div>
+                <div class="p-6 rounded-2xl glass-card-dark">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-solar-yellow mb-2 counter" data-target="18">$18M+</div>
+                    <p class="text-xs sm:text-sm font-semibold text-slate-300">Customer Bill Savings</p>
+                </div>
+                <div class="p-6 rounded-2xl glass-card-dark">
+                    <div class="text-3xl sm:text-5xl font-extrabold text-solar-emerald mb-2 counter" data-target="45000">45,000+</div>
+                    <p class="text-xs sm:text-sm font-semibold text-slate-300">Tons CO₂ Reduced</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Customer Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-solar-orange bg-orange-100/60 px-3 py-1 rounded-full">Client Reviews</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-3">Trusted by Thousands</h2>
+                <p class="text-slate-600 mt-2 text-sm">Read real feedback from homeowners and enterprise clients.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-solar-bg p-8 rounded-3xl border border-slate-200/80 shadow-soft flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-solar-yellow mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-6">“The installation was completed in a single afternoon. Our electric bill dropped from $380/month down to under $20 grid connection fee!”</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-10 h-10 rounded-full bg-solar-amber text-white font-bold flex items-center justify-center">RM</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-solar-navy">Robert Miller</h4>
+                            <p class="text-[11px] text-slate-500">Homeowner • Texas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-solar-bg p-8 rounded-3xl border border-slate-200/80 shadow-soft flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-solar-yellow mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-6">“As a manufacturing company with high power requirements, switching to MADHURA POWERS Solar cut our utility overhead by 40% in year one alone.”</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-10 h-10 rounded-full bg-solar-navy text-white font-bold flex items-center justify-center">SK</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-solar-navy">Sarah Kapoor</h4>
+                            <p class="text-[11px] text-slate-500">Operations VP • California</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-solar-bg p-8 rounded-3xl border border-slate-200/80 shadow-soft flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-solar-yellow mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm leading-relaxed italic mb-6">“Extremely transparent process, no hidden costs, and their mobile app tracking makes watching solar energy generation effortless.”</p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-200/60">
+                        <div class="w-10 h-10 rounded-full bg-solar-green text-white font-bold flex items-center justify-center">DL</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-solar-navy">David Lawson</h4>
+                            <p class="text-[11px] text-slate-500">Property Developer • Arizona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Solar FAQ Accordion -->
+    <section id="faq" class="py-24 bg-solar-bg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-solar-orange bg-orange-100/60 px-3 py-1 rounded-full">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-3">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left font-bold text-solar-navy flex justify-between items-center hover:text-solar-orange transition-colors">
+                        <span>How much does a custom residential solar system cost?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        System pricing depends on your monthly energy usage and roof dimensions. After applying federal tax incentives and state rebates, typical residential solar systems pay for themselves within 4 to 6 years.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left font-bold text-solar-navy flex justify-between items-center hover:text-solar-orange transition-colors">
+                        <span>Do solar panels work effectively during cloudy or rainy days?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Yes! Photovoltaic panels generate power using ambient solar irradiance, not just direct sunlight heat. While production may be 10-25% of maximum capacity during heavy storm clouds, energy production remains active.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left font-bold text-solar-navy flex justify-between items-center hover:text-solar-orange transition-colors">
+                        <span>What is the average lifespan of Tier-1 solar panels?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Tier-1 panels are designed to last 25 to 30 years or more. All our premium panels come backed by a 25-Year Linear Performance Warranty guaranteeing at least 85% output performance at year 25.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-sm">
+                    <button onclick="toggleFAQ(this)" class="w-full p-6 text-left font-bold text-solar-navy flex justify-between items-center hover:text-solar-orange transition-colors">
+                        <span>Is a battery backup storage system required for solar?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Battery storage is optional for grid-tied systems, but highly recommended if you want 24/7 protection against grid power outages or live in areas with time-of-use utility rates.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Final Call-to-Action -->
+    <section class="py-20 bg-gradient-to-br from-solar-navy via-slate-900 to-solar-navy text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
+                Ready to Make the Switch to Solar?
+            </h2>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Get a personalized solar energy design tailored around your energy requirements, roof specs, and financial goals.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <button onclick="openModal()" class="w-full sm:w-auto bg-gradient-to-r from-solar-yellow to-solar-orange hover:from-amber-500 hover:to-orange-600 text-solar-navy font-bold px-8 py-4 rounded-xl shadow-lg shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 text-base">
+                    Get Free Custom Proposal
+                </button>
+                <a href="#contact" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/25 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-base">
+                    Talk to a Solar Engineer
+                </a>
+            </div>
+            <div class="flex items-center justify-center space-x-6 text-xs text-slate-400 font-medium">
+                <span>✓ Zero Obligation</span>
+                <span>•</span>
+                <span>✓ Free Site Survey</span>
+                <span>•</span>
+                <span>✓ Custom ROI Estimate</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Info Left -->
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-solar-orange">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-solar-navy mt-2 mb-6">Let's Build a Cleaner Future Together</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8">Have questions about equipment, tax incentives, or system design? Our team of solar engineers is here to guide you.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-orange-100 text-solar-orange flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-solar-navy">Phone Number</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">+91 99439 70466 / +91 75025 49757</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-solar-amber flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-solar-navy">Email Address</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">madhurapower@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-solar-green flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-solar-navy">Headquarters</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Madhura Power's Karur-Trichy Main Road, Kulithalai - 639104</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Right -->
+                <div class="bg-solar-bg p-8 rounded-3xl border border-slate-200/80 shadow-soft">
+                    <h3 class="text-xl font-bold text-solar-navy mb-6">Request Free Consultation</h3>
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name *</label>
+                                <input type="text" required placeholder="Vijay" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" required placeholder="" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address *</label>
+                                <input type="email" required placeholder="vijay@gmail.com" class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Property Type</label>
+                                <select class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                                    <option>Residential Home</option>
+                                    <option>Commercial Building</option>
+                                    <option>Industrial Facility</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Message / Requirements</label>
+                            <textarea rows="3" placeholder="Tell us about your roof type or target savings..." class="w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-solar-navy hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-xs transition-all shadow-md">
+                            Submit Consultation Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Footer -->
+    <footer class="bg-solar-navy text-slate-400 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Col 1: Brand -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-3 mb-4">
+                        <img src="images/logo.jpg" alt="MADHURA POWERS logo" class="h-10 w-10 rounded-full object-cover ring-2 ring-white/20">
+                        <span class="text-xl font-extrabold text-white">MADHURA <span class="text-solar-yellow">POWERS</span></span>
+                    </a>
+                    <p class="text-xs text-slate-400 max-w-sm leading-relaxed mb-6">
+                        Pioneering accessible, ultra-reliable solar energy solutions across residential, commercial, and utility sectors.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="#"
+                           class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-solar-yellow hover:text-solar-navy transition-colors flex items-center justify-center text-slate-300">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                    
+                        <a href="#"
+                           class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-solar-yellow hover:text-solar-navy transition-colors flex items-center justify-center text-slate-300">
+                            <i class="fa-brands fa-x-twitter text-sm"></i>
+                        </a>
+                    
+                        <a href="#"
+                           class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-solar-yellow hover:text-solar-navy transition-colors flex items-center justify-center text-slate-300">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    
+                        <a href="#"
+                           class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-solar-yellow hover:text-solar-navy transition-colors flex items-center justify-center text-slate-300">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#solutions" class="hover:text-solar-yellow transition-colors">Residential Solar</a></li>
+                        <li><a href="#solutions" class="hover:text-solar-yellow transition-colors">Commercial Solar</a></li>
+                        <li><a href="#solutions" class="hover:text-solar-yellow transition-colors">Industrial Solar</a></li>
+                        <li><a href="#solutions" class="hover:text-solar-yellow transition-colors">Off-Grid Storage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Resources -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4">Resources</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="hover:text-solar-yellow transition-colors">Savings Calculator</a></li>
+                        <li><a href="#faq" class="hover:text-solar-yellow transition-colors">Solar Guide & FAQs</a></li>
+                        <li><a href="#projects" class="hover:text-solar-yellow transition-colors">Case Studies</a></li>
+                        <li><a href="#" class="hover:text-solar-yellow transition-colors">Federal Incentives</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-4">Company</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-solar-yellow transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-solar-yellow transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-solar-yellow transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-solar-yellow transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center sm:flex sm:justify-between text-xs text-slate-500">
+                <p>© 2026 MADHURA POWERS  Technologies Inc. All Rights Reserved.</p>
+                <div class="mt-2 sm:mt-0 space-x-4">
+                    <a href="#" class="hover:underline">Terms of Service</a>
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal: Get Free Solar Quote -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-solar-navy/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <img src="images/icon.jpg" alt="MADHURA POWERS" class="w-14 h-14 rounded-2xl object-cover shadow-md mx-auto mb-3">
+                <h3 class="text-xl font-bold text-solar-navy">Get Your Free Solar Proposal</h3>
+                <p class="text-xs text-slate-500 mt-1">Receive a custom 3D design and payback breakdown in 24 hours.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+                    <input type="text" id="modal-name" required placeholder="Vijay" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number</label>
+                    <input type="tel" id="modal-phone" required placeholder="(+91) 12345-67890" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 focus:ring-2 focus:ring-solar-yellow focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Selected Interest</label>
+                    <input type="text" id="modal-interest" value="Residential Solar System" readonly class="w-full bg-slate-100 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-600 font-semibold cursor-not-allowed">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-solar-yellow to-solar-orange text-solar-navy font-bold py-3 rounded-xl text-xs shadow-md hover:shadow-lg transition-all">
+                    Submit Proposal Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product Spec Detail Modal -->
+    <div id="spec-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-solar-navy/70 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-slate-100">
+            <button onclick="closeSpecModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="mb-4">
+                <span class="text-[10px] font-bold text-solar-orange bg-orange-100 px-2.5 py-0.5 rounded-full uppercase">Hardware Specs</span>
+                <h3 id="spec-title" class="text-xl font-bold text-solar-navy mt-2">Product Name</h3>
+            </div>
+            <div class="space-y-3 text-xs text-slate-600">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/60">
+                    <span class="font-bold text-slate-700 block">Performance Benchmark</span>
+                    <p id="spec-desc" class="text-slate-500 mt-0.5">Details</p>
+                </div>
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-200/60">
+                    <span class="font-bold text-slate-700 block">Warranty Assurance</span>
+                    <p id="spec-warranty" class="text-slate-500 mt-0.5">25 Year Warranty</p>
+                </div>
+            </div>
+            <button onclick="closeSpecModal(); openModal();" class="mt-6 w-full bg-solar-navy text-white font-bold py-2.5 rounded-xl text-xs">
+                Request Hardware Quote
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Property Type Selection Logic for Calculator
+        let selectedPropType = 'residential';
+        function setPropertyType(type) {
+            selectedPropType = type;
+            document.querySelectorAll('.prop-btn').forEach(btn => {
+                btn.className = "prop-btn py-2.5 px-3 border border-slate-200 text-slate-600 font-semibold rounded-xl text-xs flex items-center justify-center space-x-1 hover:border-slate-300 transition-all";
+            });
+            const activeBtn = document.getElementById(`prop-${type}`);
+            activeBtn.className = "prop-btn py-2.5 px-3 border border-solar-orange bg-orange-50/50 text-solar-orange font-semibold rounded-xl text-xs flex items-center justify-center space-x-1 transition-all";
+            calculateSavings();
+        }
+
+        // Energy Calculator
+        function calculateSavings() {
+            const bill = parseFloat(document.getElementById('bill-input').value);
+            const locationFactor = parseFloat(document.getElementById('location-select').value);
+            
+            document.getElementById('bill-display').innerText = `$${bill} / mo`;
+
+            // Estimations logic
+            let multiplier = selectedPropType === 'residential' ? 0.85 : selectedPropType === 'commercial' ? 0.88 : 0.92;
+            const monthlySavings = Math.round(bill * multiplier * (locationFactor / 1.0));
+            const annualSavings = monthlySavings * 12;
+            const capacity = (bill / 40 * locationFactor).toFixed(1);
+            const payback = (5.5 / locationFactor).toFixed(1);
+            const co2 = (capacity * 0.65).toFixed(1);
+
+            document.getElementById('res-monthly').innerText = `$${monthlySavings.toLocaleString()}`;
+            document.getElementById('res-annual').innerText = `$${annualSavings.toLocaleString()}`;
+            document.getElementById('res-capacity').innerText = `${capacity} kW`;
+            document.getElementById('res-payback').innerText = `${payback} Yrs`;
+            document.getElementById('res-co2').innerText = `${co2} Tons`;
+        }
+
+        // Toast Notification System
+        function showToast(title, desc) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-desc').innerText = desc;
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+            }, 3500);
+        }
+
+        // Modal Controls
+        function openModal() {
+            document.getElementById('quote-modal').classList.remove('hidden');
+            document.getElementById('quote-modal').classList.add('flex');
+        }
+
+        function openModalWithDetails() {
+            const bill = document.getElementById('bill-input').value;
+            document.getElementById('modal-interest').value = `Solar Calculator Estimate ($${bill}/mo Bill)`;
+            openModal();
+        }
+
+        function openModalWithSolution(solutionName) {
+            document.getElementById('modal-interest').value = solutionName;
+            openModal();
+        }
+
+        function closeModal() {
+            document.getElementById('quote-modal').classList.add('hidden');
+            document.getElementById('quote-modal').classList.remove('flex');
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeModal();
+            showToast("Quote Requested!", "Our solar engineers will contact you within 24 hours.");
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            e.target.reset();
+            showToast("Consultation Submitted!", "Thank you for reaching out to MADHURA POWERS Solar.");
+        }
+
+        // Spec Modal
+        function openProductDetails(title, desc, warranty) {
+            document.getElementById('spec-title').innerText = title;
+            document.getElementById('spec-desc').innerText = desc;
+            document.getElementById('spec-warranty').innerText = warranty;
+            document.getElementById('spec-modal').classList.remove('hidden');
+            document.getElementById('spec-modal').classList.add('flex');
+        }
+
+        function closeSpecModal() {
+            document.getElementById('spec-modal').classList.add('hidden');
+            document.getElementById('spec-modal').classList.remove('flex');
+        }
+
+        // Product Filtering
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Gallery Filtering
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Run calculation on load
+        window.onload = function() {
+            calculateSavings();
+        };
+    </script>
+</body>
+</html>

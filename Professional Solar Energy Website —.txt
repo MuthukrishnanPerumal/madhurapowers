@@ -1,0 +1,483 @@
+Professional Solar Energy Website — UI/UX Design Prompt
+
+Create a modern, professional, simple, and highly attractive Solar Energy Company website with a premium clean-energy aesthetic.
+
+The website should feel trustworthy, innovative, eco-friendly, modern, and conversion-focused. Avoid excessive animations, gradients, or clutter. Prioritize clear information, strong visuals, easy navigation, and excellent mobile responsiveness.
+
+Overall Design Direction
+
+- Modern clean-energy / renewable-energy theme
+- Premium corporate appearance
+- Minimal and spacious layout
+- Strong visual hierarchy
+- Rounded cards with subtle shadows
+- High-quality solar panel and residential/commercial solar imagery
+- White/off-white primary background
+- Use solar yellow, warm orange, deep green, and dark navy/charcoal as accent colors
+- Use a modern font such as Inter, Manrope, Poppins, or Plus Jakarta Sans
+- Large headings with short, powerful messaging
+- Smooth micro-interactions and subtle hover effects
+- Avoid excessive green usage
+- Use plenty of whitespace
+- Fully responsive for desktop, tablet, and mobile
+
+---
+
+1. Header / Navigation
+
+Create a clean sticky navigation bar.
+
+Left
+
+- Professional solar company logo
+- Company name
+
+Center / Right Navigation
+
+- Home
+- About
+- Solar Solutions
+- Products
+- How It Works
+- Projects
+- FAQs
+- Contact
+
+CTA
+
+Add a prominent button:
+
+Get a Free Solar Quote
+
+Header should become slightly compact while scrolling.
+
+On mobile:
+
+- Logo
+- Hamburger menu
+- Call/Quote CTA
+
+---
+
+2. Hero Section
+
+Create a visually impressive hero section using a high-quality modern solar rooftop image.
+
+Main Heading
+
+Power Your Future With Clean Solar Energy
+
+Supporting Text
+
+Save on electricity, increase energy independence, and make a smarter investment with reliable solar power solutions.
+
+Primary CTA
+
+Get a Free Quote →
+
+Secondary CTA
+
+Explore Solar Solutions
+
+Add a small trust indicator below the buttons:
+
+✓ 25+ Years of Expertise
+✓ Quality Solar Products
+✓ Professional Installation
+✓ Long-Term Support
+
+Include a subtle solar-energy visual element such as sunlight, solar panels, or an energy glow.
+
+---
+
+3. Quick Energy Savings Calculator
+
+Immediately below the hero, create an attractive floating calculator card.
+
+Heading:
+
+How Much Can You Save With Solar?
+
+Inputs:
+
+- Monthly Electricity Bill
+- Location
+- Property Type
+  - Residential
+  - Commercial
+  - Industrial
+
+CTA:
+
+Calculate My Savings
+
+Show results dynamically:
+
+- Recommended Solar Capacity
+- Estimated Monthly Savings
+- Estimated Annual Savings
+- Estimated Payback Period
+- Estimated CO₂ Reduction
+
+Use large numbers and simple icons.
+
+---
+
+4. Why Choose Solar?
+
+Create a section with a strong heading:
+
+Why Go Solar?
+
+Display 4 premium cards:
+
+Lower Electricity Bills
+
+Reduce your monthly electricity expenses.
+
+Energy Independence
+
+Generate your own clean electricity.
+
+Long-Term Investment
+
+Turn sunlight into long-term savings.
+
+Sustainable Future
+
+Reduce your carbon footprint and support clean energy.
+
+Use simple line icons rather than complex illustrations.
+
+---
+
+5. Solar Solutions
+
+Create a visually attractive solution section with large cards.
+
+Residential Solar
+
+Solar solutions designed for homes and apartments.
+
+CTA:
+Explore Residential →
+
+Commercial Solar
+
+Reduce operational electricity costs for businesses.
+
+CTA:
+Explore Commercial →
+
+Industrial Solar
+
+High-capacity solar solutions for industrial facilities.
+
+CTA:
+Explore Industrial →
+
+Off-Grid Solar
+
+Reliable solar power solutions for locations with limited grid access.
+
+CTA:
+Explore Off-Grid →
+
+Each card should use a relevant professional image.
+
+---
+
+6. How It Works
+
+Create a simple 4-step visual timeline.
+
+01 — Consultation
+
+Understand your energy requirements.
+
+02 — Site Assessment
+
+Analyze your property, electricity usage, and solar potential.
+
+03 — Installation
+
+Install high-quality solar panels and required equipment.
+
+04 — Start Saving
+
+Generate clean electricity and reduce your power bills.
+
+Use connecting lines between the steps.
+
+---
+
+7. Solar Products
+
+Create a modern product showcase section.
+
+Categories:
+
+- Solar Panels
+- Inverters
+- Battery Storage
+- Solar Water Heaters
+- Solar Accessories
+
+Each product card should contain:
+
+- Product image
+- Product name
+- Short description
+- Key specification
+- View Details button
+
+Add a Compare Products option.
+
+---
+
+8. Our Projects
+
+Create a portfolio/gallery section showcasing completed solar installations.
+
+Filters:
+
+All | Residential | Commercial | Industrial
+
+Each project card should display:
+
+- Project image
+- Project name
+- Location
+- System capacity
+- Project type
+
+Example:
+
+Green Residence
+Chennai
+5 kW Residential Solar
+
+Add a View All Projects button.
+
+Use a premium image gallery layout.
+
+---
+
+9. Solar Impact Statistics
+
+Create a dark premium section with large statistics.
+
+Display:
+
+10,000+
+Solar Installations
+
+50+ MW
+Clean Energy Generated
+
+₹10 Cr+
+Customer Savings
+
+25,000+ Tons
+CO₂ Reduction
+
+Numbers should animate subtly when entering the viewport.
+
+---
+
+10. Customer Testimonials
+
+Heading:
+
+Trusted by Customers
+
+Create 3–4 clean testimonial cards.
+
+Each card should contain:
+
+- Customer photo/avatar
+- Name
+- Location
+- Star rating
+- Short review
+
+Example:
+
+«“The installation process was smooth and professional. Our electricity bill has reduced significantly.”»
+
+---
+
+11. Solar FAQ
+
+Create an accordion-style FAQ section.
+
+Questions:
+
+- How much does a solar system cost?
+- How many solar panels do I need?
+- How much can I save with solar?
+- How long does solar installation take?
+- What is the lifespan of solar panels?
+- Do solar panels work during cloudy weather?
+- Is battery storage required?
+- What maintenance does a solar system need?
+- Are government subsidies available?
+
+Use smooth accordion animations.
+
+---
+
+12. Final Call-to-Action
+
+Create a visually strong CTA section.
+
+Heading
+
+Ready to Make the Switch to Solar?
+
+Text
+
+Get a personalized solar solution designed around your energy needs and budget.
+
+Buttons:
+
+Get a Free Solar Quote
+
+Talk to an Expert
+
+Add a small trust message:
+
+No obligation • Free consultation • Customized proposal
+
+---
+
+13. Contact Section
+
+Create a clean two-column contact section.
+
+Left
+
+Let's Build a Cleaner Future Together
+
+Display:
+
+- Phone
+- WhatsApp
+- Email
+- Office Address
+- Working Hours
+
+Right
+
+Create a modern contact form:
+
+- Name
+- Phone Number
+- Email
+- Location
+- Property Type
+- Monthly Electricity Bill
+- Message
+
+CTA:
+
+Request a Free Consultation
+
+---
+
+14. Footer
+
+Create a professional dark footer.
+
+Include:
+
+Company
+
+- About Us
+- Our Projects
+- Careers
+- Contact
+
+Solutions
+
+- Residential Solar
+- Commercial Solar
+- Industrial Solar
+- Off-Grid Solar
+
+Resources
+
+- Solar Calculator
+- FAQs
+- Blog
+- Solar Guide
+
+Contact
+
+- Phone
+- Email
+- Address
+- WhatsApp
+
+Include social media icons.
+
+Bottom:
+
+© 2026 [Company Name]. All Rights Reserved.
+
+Links:
+
+Privacy Policy | Terms & Conditions
+
+---
+
+UI/UX Requirements
+
+Make the website:
+
+- Fully responsive
+- Mobile-first
+- Fast loading
+- SEO-friendly
+- Accessible
+- Easy to navigate
+- Conversion-focused
+
+Use:
+
+- Sticky header
+- Smooth scrolling
+- Subtle hover animations
+- Scroll reveal animations
+- Interactive cards
+- Animated statistics
+- Modern buttons
+- Clean icons
+- Proper spacing
+- Consistent border radius
+- Strong typography hierarchy
+
+Avoid:
+
+- Too many colors
+- Excessive animations
+- Crowded sections
+- Huge blocks of text
+- Cheap-looking stock imagery
+- Excessive gradients
+- Complicated navigation
+- Unnecessary popups
+
+Visual Style
+
+The final website should look like a combination of:
+
+Premium Solar Technology + Modern SaaS + Eco-Friendly Corporate Website
+
+The overall impression should be:
+
+Clean • Trustworthy • Premium • Sustainable • Modern • Professional
+
+The design must immediately communicate:
+
+“This company provides reliable solar solutions and can be trusted with a major long-term investment.”
