@@ -1,0 +1,110 @@
+/* Custom subtle scrollbar & utility styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.65) 100%),
+                url('https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card-dark {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#mobile-menu {
+    transform-origin: top right;
+}
+
+#mobile-menu.is-open {
+    display: block;
+}
+
+.footer-summary {
+    list-style: none;
+}
+
+.footer-summary::-webkit-details-marker {
+    display: none;
+}
+
+.footer-chevron {
+    transition: transform 0.2s ease;
+}
+
+.footer-group[open] .footer-chevron {
+    transform: rotate(180deg);
+}
+
+#back-to-top {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+#back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .footer-group::details-content {
+        content-visibility: visible;
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+
+    .footer-group > :not(summary) {
+        display: block !important;
+    }
+
+    .footer-summary {
+        pointer-events: none;
+    }
+}
